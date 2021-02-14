@@ -12,14 +12,13 @@ from selenium import webdriver
 import time 
 
 
-#Info 
-data_info = {'date':[],'twit':[]}
-data_url = {"url":[]}
+#Info that you want to collect 
+data_info = {'date':[],'twit':[]} #Tweets time_tag and content
+data_url = {"url":[]} #Tweets URL
 company = "LSValue"
-#load the link
-#Initialization 
-#driver = webdriver.Firefox(executable_path='C:\Program Files\Mozilla Firefox\geckodriver.exe') 
-#Log in 
+
+driver = webdriver.Firefox(executable_path='C:\Program Files\Mozilla Firefox\geckodriver.exe') 
+
 
 year_list = range(2010,2020)
 month_list = range(1,13)
@@ -36,12 +35,7 @@ for year in year_list:
         driver.get("https://twitter.com/search?q=(from%3A"+company+")%20until%3A"+str(year)+"-"+str(month)+"-"+str(day+1)+"%20since%3A"+str(year)+"-"+str(month)+"-"+str(day)+" -filter%3Areplies&src=typed_query")
     else: 
         continue
-    '''
-    driver.find_element_by_id("id_username-username").send_keys('serial.orders@deakin.edu.au')
-    driver.find_element_by_class_name('action_button').click()
-    driver.find_element_by_id("id_auth-password").send_keys('mintel2020')
-    driver.find_element_by_class_name('action_button').click()
-    '''
+      
     height = 0
     status = True
     error = 0
