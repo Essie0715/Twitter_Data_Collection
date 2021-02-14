@@ -1,2 +1,2 @@
 # Twitter_Data_Collection
-Twitter scrapping using selenium 
+Twitter scraping using selenium 
