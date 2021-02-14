@@ -13,13 +13,13 @@ import time
 
 
 #Info that you want to collect 
-data_info = {'date':[],'twit':[]} #Tweets time_tag and content
+data_info = {'date':[],'twit':[]} #Tweets time tag and content
 data_url = {"url":[]} #Tweets URL
-company = "LSValue"
+company = "LSValue" #User tag 
 
-driver = webdriver.Firefox(executable_path='C:\Program Files\Mozilla Firefox\geckodriver.exe') 
+driver = webdriver.Firefox(executable_path='C:\Program Files\Mozilla Firefox\geckodriver.exe') #Change path as per required 
 
-
+#Time line 
 year_list = range(2010,2020)
 month_list = range(1,13)
 for year in year_list:
